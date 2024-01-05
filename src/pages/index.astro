@@ -1,0 +1,154 @@
+---
+import { Image } from 'astro:assets';
+import Logo from "../assets/images/website_logo.png";
+import '@fontsource-variable/inter';
+---
+
+<html lang="fr-FR">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width="device-width, initial-scale=1" />
+		<meta name="description" content="UI d'une plateforme de streaming" />
+		<meta name="author" content="Florentwebdev" />
+		<meta name="theme-color" content="#FF0000" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<title>Youbento - UI d'une plateforme de streaming</title>
+		<meta property="og:title" content="Youbento - UI d'une plateforme de streaming" />
+		<meta property="og:description" content="Regarder une vidéo gratuitement." />
+		<meta property="og:image" content="https://monsite.com/favicon.png" />
+		<meta property="og:image:alt" content="Logo du site youbento" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://monsite.com" />
+		<meta property="og:site_name" content="Youbento" />
+	</head>
+	<body>
+		<header>
+			<div id="website-icon-container">
+				<Image src={Logo} alt="Avatar de l'utilisateur" />
+			</div>
+
+			<div id="searchbar-container">
+				<svg height="24" width="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+					<path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+				</svg>
+
+				<input type="text" id="searchbar" placeholder="Rechercher" />
+
+				<svg height="24" width="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" />
+				</svg>
+			</div>
+			
+			<div id="actions-buttons-container">
+				<button id="upload-video-button">
+					<svg height="24" width="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+					</svg>
+				</button>
+
+				<button id="notifications-button">
+					<svg height="24" width="24" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+					</svg>
+				</button>
+
+				<button id="user-profil-button" />
+			</div>
+		</header>
+
+		<main>
+			<section id="home-view"></section>
+			<section id="second-view"></section>
+		</main>
+	</body>
+</html>
+
+
+<style>
+	body {
+		background-color: #111827;
+		min-height: 100vh;
+		padding-top: 24px;
+		font-family: 'Inter Variable', sans-serif;
+	}
+
+	/* Header */
+	header {
+		display: grid;
+		grid-template-columns: 2fr 8fr 2fr;
+		max-width: 1240px;
+		margin: 0 auto;
+		column-gap: 24px;
+		max-height: 60px;
+		height: 60px;
+		overflow: hidden;
+	}
+		/* Icon container */
+		#website-icon-container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #FF0000;
+			border-radius: 12px;
+		}
+
+		/* Searchbar & Actions buttons container */
+		#searchbar-container,
+		#actions-buttons-container {
+			background-color: #1F2937;
+			border-radius: 12px;
+		}
+
+		/* Searchbar */
+		#searchbar-container{
+			display: grid;
+			grid-template-columns: 24px 1fr 24px;
+			column-gap: 8px;
+			padding: 0px 16px;
+			align-items: center;
+			color: #6B7280;
+		}
+
+		#searchbar-container svg {
+			color: #6B7280;
+		}
+
+		#searchbar-container input {
+			background-color: transparent;
+			border: none;
+			color: #D1D5DB;
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 24px;
+			padding: 8px 0px;
+		}
+
+		#searchbar-container input:focus {
+			outline: none;
+		}
+		
+		#searchbar-container input::placeholder {
+			color: #6B7280;
+		}
+		
+		/* Actions Button */
+		#actions-buttons-container {
+			height: 100%;
+			max-height: 100%;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+		}
+		#actions-buttons-container button {
+			background-color: transparent;
+			border: none;
+			color: white;
+		}
+		
+		#actions-buttons-container button:hover {
+			cursor: pointer;
+		}
+
+		#user-profil-button {
+			background: url("../assets/images/avatar.png") no-repeat center;
+		}
+</style>
