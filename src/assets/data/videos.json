@@ -1,0 +1,53 @@
+[
+    {
+        "id":1,
+        "title": "5 jours pour traverser la Corse à pied ! (La randonnée la plus dure d’Europe) GR20",
+        "poster": "/src/assets/images/posters/image1.png",
+        "author": "Inoxtag",
+        "authorImage": "/src/assets/images/avatars/profil1.png",
+        "views": "4,6 M",
+        "date": "1 m",
+        "time": "1:07:40"
+    },
+    {
+        "id":2,
+        "title": "Tout sur Tortues Ninja (1987) !",
+        "poster": "/src/assets/images/posters/image2.png",
+        "author": "Bazar du Grenier",
+        "authorImage": "/src/assets/images/avatars/profil2.png",
+        "views": "685 k",
+        "date": "3 j",
+        "time": "22:16"
+    },
+    {
+        "id":3,
+        "title": "Je prototype le dernier Dropdown de ma carrière. Et je te l’offre 🎁",
+        "poster": "/src/assets/images/posters/image3.png",
+        "author": "Mickadoule",
+        "authorImage": "/src/assets/images/avatars/profil3.png ",
+        "views": "887",
+        "date": "1 s",
+        "time": "7:05"
+    },
+    {
+        "id":4,
+        "title": "HOT ONES : Mister V sera-t-il meilleur qu'au GP Explorer ?",
+        "poster": "/src/assets/images/posters/image4.png",
+        "author": "Studio Bagel",
+        "authorImage": "/src/assets/images/avatars/profil4.png",
+        "views": "1,9 M",
+        "date": "2 j",
+        "time": "34:34"
+    },
+    {
+        "id":5,
+        "title": "5€ pendant une journée en Amérique du Sud",
+        "poster": "/src/assets/images/posters/image5.png",
+        "author": "CYRILmp4",
+        "authorImage": "/src/assets/images/avatars/profil5.png",
+        "views": "370 k",
+        "date": "1 j",
+        "time": "17:09"
+    }
+    
+]

@@ -1,0 +1,134 @@
+---
+    const { title, poster, author, authorImage, views, date, time } = Astro.props;
+---
+
+<section class="video">
+    <div class="poster-container">
+        <img src={poster} alt="Poster" />
+        <span>{ time }</span>
+    </div>
+
+    <div class="text-container">
+        <img src={poster} alt="Poster" />
+
+        <div class="author-avatar">
+            <img height="28" width="28" src={authorImage} alt="Avatar" />
+        </div>
+        
+        <div class="text">
+            <h1>{ title }</h1>
+            <div class="infos">
+                <p>{ author }</p>
+                <span>•</span>
+                <p>{ views } vues</p>
+                <span>•</span>
+                <p>il y a { date }</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<style>
+    * {
+        color: white;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    section {
+        height: 100%;
+        cursor: pointer;
+    }
+
+    .poster-container {
+        position: relative;
+        max-height: 164px;
+    }
+
+    .poster-container > img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .poster-container > img:hover {
+        filter: brightness(0.8);
+    }
+
+    .poster-container span {
+        position: absolute;
+        font-size: 12px;
+        height: 20px;
+        width: 55px;
+        padding: 0px 6px;
+        border-radius: 1000px;
+        right: 8px;
+        bottom: 8px;
+        background-color: #09090B99;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* filter: blur(0.2em); */
+
+    }
+
+
+    .text-container {
+        background-color: transparent;
+        overflow: hidden;
+        position: relative;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        padding: 12px;
+        display: grid;
+        column-gap: 8px;
+        grid-template-columns: 28px 1fr;
+        min-height: 79px;
+    }
+    .author-avatar img {
+        height: 28px;
+        width: 28px;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    .text {
+        display: flex;
+        row-gap: 2px;
+
+        flex-direction: column;
+    }
+
+    .text-container h1 {
+        font-size: 14px;
+        line-clamp: 2;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+        grid-area: title;
+        line-height: 20px;
+    }
+
+    .text-container > img {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        filter: blur(10em);
+        object-fit: cover;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+
+    .text-container .infos {
+        font-size: 10px;
+        height: 13px;
+        max-height: 13px;
+        display: flex;
+        column-gap: 4px;
+        color: #FFFFFF80;
+        grid-area: infos;
+    }
+</style>

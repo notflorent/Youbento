@@ -4,6 +4,8 @@ import Logo from "../assets/images/website_logo.png";
 import '@fontsource-variable/inter';
 
 import SubscribeProfile from "../components/SubscribeProfile.astro";
+import Video from "../components/Video.astro";
+import videos from "../assets/data/videos.json";
 ---
 
 <html lang="fr-FR">
@@ -179,71 +181,14 @@ import SubscribeProfile from "../components/SubscribeProfile.astro";
 				</menu>
 
 				<section id="videos-container">
-					<div class="video">
-						<div class="poster-container">
-							<!-- img -->
-							<span>1:07:40</span>
-						</div>
-
-						<div class="text-container">
-							<h1>5 jours pour traverser la Corse à pied ! (La randonnée la plus dure d’Europe) GR20</h1>
-							<div>
-								<p>Mickadoule</p>
-								<p>867 vues</p>
-								<p>il y a 1 mois</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="video">
-						<div class="poster-container">
-							<!-- img -->
-							<span>1:07:40</span>
-						</div>
-
-						<div class="text-container">
-							<h1>5 jours pour traverser la Corse à pied ! (La randonnée la plus dure d’Europe) GR20</h1>
-							<div>
-								<p>Mickadoule</p>
-								<p>867 vues</p>
-								<p>il y a 1 mois</p>
-							</div>
-						</div>
-						<!--  -->
+					<Video {...videos[0]} />
+					<Video {...videos[1]} />
+					<Video {...videos[2]} />
 				</section>
 
 				<section id="bottom-videos-container">
-					<div class="video">
-						<div class="poster-container">
-							<!-- img -->
-							<span>1:07:40</span>
-						</div>
-
-						<div class="text-container">
-							<h1>5 jours pour traverser la Corse à pied ! (La randonnée la plus dure d’Europe) GR20</h1>
-							<div>
-								<p>Mickadoule</p>
-								<p>867 vues</p>
-								<p>il y a 1 mois</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="video">
-						<div class="poster-container">
-							<!-- img -->
-							<span>1:07:40</span>
-						</div>
-
-						<div class="text-container">
-							<h1>5 jours pour traverser la Corse à pied ! (La randonnée la plus dure d’Europe) GR20</h1>
-							<div>
-								<p>Mickadoule</p>
-								<p>867 vues</p>
-								<p>il y a 1 mois</p>
-							</div>
-						</div>
-						<!--  -->
+					<Video {...videos[3]} />
+					<Video {...videos[4]} />
 				</section>
 
 				<section id="shorts-container">
@@ -253,17 +198,17 @@ import SubscribeProfile from "../components/SubscribeProfile.astro";
 				<section id="subscribe-list">
 					<h1>Abonnements</h1>
 					<ul>
-						<li><SubscribeProfile name="SQUEEZIE" avatar="/src/assets/images/squeezie.png" /></li>
-						<li><SubscribeProfile name="Mcfly et Carlito" avatar="/src/assets/images/m&c.png" /></li>
-						<li><SubscribeProfile name="Pepperpot Team" avatar="/src/assets/images/pt.png" /></li>
-						<li><SubscribeProfile name="Sir Gibsy" avatar="/src/assets/images/sg.png" /></li>
-						<li><SubscribeProfile name="Vilebrequin" avatar="/src/assets/images/vi.png" /></li>
-						<li><SubscribeProfile name="Fouloscopie" avatar="/src/assets/images/fl.png" /></li>
-						<li><SubscribeProfile name="G Milgram" avatar="/src/assets/images/dm.png" /></li>
-						<li><SubscribeProfile name="The Sciencoder" avatar="/src/assets/images/ts.png" /></li>
-						<li><SubscribeProfile name="Underscore_" avatar="/src/assets/images/un.png" /></li>
-						<li><SubscribeProfile name="WTF'UX" avatar="/src/assets/images/wt.png" /></li>
-						<li><SubscribeProfile name="Tales From The Click" avatar="/src/assets/images/tf.png" /></li>
+						<li><SubscribeProfile name="SQUEEZIE" avatar="/src/assets/images/avatars/squeezie.png" /></li>
+						<li><SubscribeProfile name="Mcfly et Carlito" avatar="/src/assets/images/avatars/m&c.png" /></li>
+						<li><SubscribeProfile name="Pepperpot Team" avatar="/src/assets/images/avatars/pt.png" /></li>
+						<li><SubscribeProfile name="Sir Gibsy" avatar="/src/assets/images/avatars/sg.png" /></li>
+						<li><SubscribeProfile name="Vilebrequin" avatar="/src/assets/images/avatars/vi.png" /></li>
+						<li><SubscribeProfile name="Fouloscopie" avatar="/src/assets/images/avatars/fl.png" /></li>
+						<li><SubscribeProfile name="G Milgram" avatar="/src/assets/images/avatars/dm.png" /></li>
+						<li><SubscribeProfile name="The Sciencoder" avatar="/src/assets/images/avatars/ts.png" /></li>
+						<li><SubscribeProfile name="Underscore_" avatar="/src/assets/images/avatars/un.png" /></li>
+						<li><SubscribeProfile name="WTF'UX" avatar="/src/assets/images/avatars/wt.png" /></li>
+						<li><SubscribeProfile name="Tales From The Click" avatar="/src/assets/images/avatars/tf.png" /></li>
 						<li id="more-sub">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
 								<path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
@@ -295,7 +240,7 @@ import SubscribeProfile from "../components/SubscribeProfile.astro";
 		"mn mn mn vb vb vb vb vb vb ab ab ab"
 		"sh sh sh sh sh sh sh sh sh ab ab ab";
 		grid-template-columns: repeat(12, 1fr);
-		grid-template-rows: 255px 255px 390px;
+		grid-template-rows: 243px 243px 390px;
 		gap: 24px;
 	}
 
@@ -354,7 +299,9 @@ import SubscribeProfile from "../components/SubscribeProfile.astro";
 
 	#videos-container {
 		grid-area: vi;
-		background-color: green;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 24px;
 	}
 
 	#shorts-container {
@@ -364,7 +311,9 @@ import SubscribeProfile from "../components/SubscribeProfile.astro";
 	
 	#bottom-videos-container {
 		grid-area: vb;
-		background-color: orange;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 24px;
 	}
 
 	#subscribe-list {
@@ -407,7 +356,7 @@ import SubscribeProfile from "../components/SubscribeProfile.astro";
 		font-size: 14px;
 	}
 
-	#videos-container *, #bottom-videos-container *, #shorts-container * {
+	#shorts-container * {
 		display: none;
 	}
 
@@ -500,6 +449,6 @@ import SubscribeProfile from "../components/SubscribeProfile.astro";
 		}
 
 		#user-profil-button {
-			background: url("../assets/images/avatar.png") no-repeat center;
+			background: url("../assets/images/avatars/avatar.png") no-repeat center;
 		}
 </style>
