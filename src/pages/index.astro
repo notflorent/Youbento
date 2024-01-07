@@ -2,6 +2,8 @@
 import { Image } from 'astro:assets';
 import Logo from "../assets/images/website_logo.png";
 import '@fontsource-variable/inter';
+
+import SubscribeProfile from "../components/SubscribeProfile.astro";
 ---
 
 <html lang="fr-FR">
@@ -57,7 +59,226 @@ import '@fontsource-variable/inter';
 		</header>
 
 		<main>
-			<section id="home-view"></section>
+			<section id="home-view">
+				<menu>
+					<nav>
+						<ul>
+							<li>
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g id="Icon">
+									<path id="Vector" d="M6 14.6667V8H10V14.6667M2 6L8 1.33333L14 6V13.3333C14 13.687 13.8595 14.0261 13.6095 14.2761C13.3594 14.5262 13.0203 14.6667 12.6667 14.6667H3.33333C2.97971 14.6667 2.64057 14.5262 2.39052 14.2761C2.14048 14.0261 2 13.687 2 13.3333V6Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</g>
+								</svg>
+								<span>Acceuil</span>
+							</li>
+							<li>
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g id="Icon" clip-path="url(#clip0_2715_22)">
+									<g id="Vector">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M3.44092 4.53985C2.06302 5.31257 1.59091 7.02396 2.38645 8.36234C2.79695 9.05297 3.46478 9.50932 4.20438 9.68312L3.44092 10.1113C2.06302 10.884 1.59091 12.5954 2.38645 13.9337C3.18198 15.2721 4.9439 15.7307 6.3218 14.958L12.5591 11.4602C13.937 10.6874 14.4091 8.97605 13.6136 7.63767C13.203 6.94704 12.5352 6.49069 11.7956 6.3169L12.5591 5.88875C13.937 5.11604 14.4091 3.40465 13.6136 2.06627C12.818 0.727882 11.0561 0.269317 9.6782 1.04203L3.44092 4.53985Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M6.66667 10L10 8L6.66667 6V10Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</g>
+									</g>
+									<defs>
+									<clipPath id="clip0_2715_22">
+									<rect width="16" height="16" fill="white"/>
+									</clipPath>
+									</defs>
+								</svg>
+								<span>Shorts</span>
+							</li>
+							<li>
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g id="Icon" clip-path="url(#clip0_2715_364)">
+									<path id="Vector" d="M2.66683 4.4C6.24246 3.80764 9.8912 3.80764 13.4668 4.4M6.30241 2.00287C7.64532 1.93106 8.99153 1.94129 10.3335 2.03357M1.68278 14C1.21707 11.8022 1.21707 9.53115 1.68278 7.33333C1.74398 7.11014 1.86221 6.90671 2.02586 6.74307C2.1895 6.57942 2.39292 6.46119 2.61612 6.4C6.19175 5.80764 9.84049 5.80764 13.4161 6.4C13.6393 6.46119 13.8427 6.57942 14.0064 6.74307C14.17 6.90671 14.2883 7.11014 14.3495 7.33333C14.8152 9.53115 14.8152 11.8022 14.3495 14C14.2883 14.2232 14.17 14.4266 14.0064 14.5903C13.8427 14.7539 13.6393 14.8721 13.4161 14.9333C9.8405 15.5258 6.19174 15.5258 2.61612 14.9333C2.39292 14.8721 2.1895 14.7539 2.02586 14.5903C1.86221 14.4266 1.74398 14.2232 1.68278 14ZM6.68278 12.6667L10.0161 10.6667L6.68278 8.66666V12.6667Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</g>
+									<defs>
+									<clipPath id="clip0_2715_364">
+									<rect width="16" height="16" fill="white"/>
+									</clipPath>
+									</defs>
+								</svg>
+								<span>Abonnements</span>
+							</li>
+							<li>
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g id="Icon" clip-path="url(#clip0_2715_74)">
+									<g id="Vector">
+									<path d="M6.6665 10L9.99984 8L6.6665 6V10Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+									<path d="M12.6665 8C12.6665 10.5773 10.5772 12.6667 7.99984 12.6667C5.42251 12.6667 3.33317 10.5773 3.33317 8C3.33317 5.42267 5.42251 3.33333 7.99984 3.33333C10.5772 3.33333 12.6665 5.42267 12.6665 8Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+									<path d="M15.3332 8C15.3332 12.0501 12.0499 15.3333 7.99984 15.3333C3.94975 15.3333 0.666504 12.0501 0.666504 8C0.666504 3.94991 3.94975 0.666668 7.99984 0.666668C12.0499 0.666668 15.3332 3.94991 15.3332 8Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+									</g>
+									</g>
+									<defs>
+									<clipPath id="clip0_2715_74">
+									<rect width="16" height="16" fill="white"/>
+									</clipPath>
+									</defs>
+								</svg>
+								<span>Youtube Music</span>
+							</li>
+						</ul>
+					</nav>
+					<div>
+						<span>Vous</span>
+						<p />
+					</div>
+					<nav>
+						<ul>
+							<li>
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g id="Icon">
+									<path id="Vector" d="M12 14C12 12.9391 11.5786 11.9217 10.8284 11.1716C10.0783 10.4214 9.06087 10 8 10M8 10C6.93913 10 5.92172 10.4214 5.17157 11.1716C4.42143 11.9217 4 12.9391 4 14M8 10C9.47276 10 10.6667 8.80609 10.6667 7.33333C10.6667 5.86057 9.47276 4.66667 8 4.66667C6.52724 4.66667 5.33333 5.86057 5.33333 7.33333C5.33333 8.80609 6.52724 10 8 10ZM3.33333 2H12.6667C13.403 2 14 2.59695 14 3.33333V12.6667C14 13.403 13.403 14 12.6667 14H3.33333C2.59695 14 2 13.403 2 12.6667V3.33333C2 2.59695 2.59695 2 3.33333 2Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</g>
+								</svg>
+								<span>Votre chaine</span>
+							</li>
+							<li>
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g id="Icon">
+									<path id="Vector" d="M2 8C2 9.18669 2.35189 10.3467 3.01118 11.3334C3.67047 12.3201 4.60754 13.0892 5.7039 13.5433C6.80026 13.9974 8.00666 14.1162 9.17054 13.8847C10.3344 13.6532 11.4035 13.0818 12.2426 12.2426C13.0818 11.4035 13.6532 10.3344 13.8847 9.17054C14.1162 8.00666 13.9974 6.80026 13.5433 5.7039C13.0892 4.60754 12.3201 3.67047 11.3334 3.01118C10.3467 2.35189 9.18669 2 8 2C6.32263 2.00631 4.71265 2.66082 3.50667 3.82667L2 5.33333M2 5.33333V2M2 5.33333H5.33333M8 4.66667V8L10.6667 9.33333" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</g>
+								</svg>
+								<span>Historique</span>
+							</li>
+							<li>
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g id="Icon">
+									<g id="Vector">
+									<path d="M1.66667 11.3333C1.20095 9.13551 1.20095 6.86449 1.66667 4.66667C1.72786 4.44347 1.8461 4.24005 2.00974 4.0764C2.17339 3.91276 2.37681 3.79453 2.6 3.73333C6.17564 3.14097 9.82437 3.14097 13.4 3.73333C13.6232 3.79453 13.8266 3.91276 13.9903 4.0764C14.1539 4.24005 14.2721 4.44347 14.3333 4.66667C14.7991 6.86449 14.7991 9.13551 14.3333 11.3333C14.2721 11.5565 14.1539 11.7599 13.9903 11.9236C13.8266 12.0872 13.6232 12.2055 13.4 12.2667C9.82438 12.8591 6.17563 12.8591 2.6 12.2667C2.37681 12.2055 2.17339 12.0872 2.00974 11.9236C1.8461 11.7599 1.72786 11.5565 1.66667 11.3333Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M6.66667 10L10 8L6.66667 6V10Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</g>
+									</g>
+								</svg>
+								<span>Vos Vidéos</span>
+							</li>
+							<li>
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g id="Icon">
+									<path id="Vector" d="M6.6665 1.33333H9.33317M7.99984 9.33333V6.66666M2.6665 8.66666C2.82975 7.37064 3.46294 6.1796 4.446 5.31942C5.42906 4.45925 6.69362 3.98976 7.99984 4C8.86254 4.00091 9.71213 4.21109 10.4758 4.6125C11.2394 5.01391 11.8942 5.59458 12.3841 6.30468C12.874 7.01478 13.1844 7.83313 13.2885 8.68952C13.3926 9.5459 13.2875 10.4148 12.982 11.2216C12.6766 12.0284 12.18 12.7491 11.5348 13.3218C10.8897 13.8945 10.1152 14.3022 9.27788 14.5099C8.44054 14.7175 7.56533 14.7189 6.72733 14.514C5.88932 14.3091 5.11353 13.904 4.4665 13.3333L2.6665 11.7333M5.99984 11.3333H2.6665V14.6667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</g>
+								</svg>
+								<span>A regarder plus tard</span>
+							</li>
+							<li>
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g id="Icon">
+									<path id="Vector" d="M2.66657 9.93267C2.17126 9.42662 1.79761 8.81448 1.57392 8.14263C1.35023 7.47078 1.28237 6.75684 1.37547 6.05488C1.46858 5.35291 1.7202 4.68134 2.1113 4.09103C2.50239 3.50072 3.02269 3.00715 3.63279 2.64771C4.24289 2.28827 4.92678 2.07238 5.63268 2.01639C6.33857 1.96041 7.04795 2.0658 7.70708 2.32458C8.36621 2.58336 8.9578 2.98875 9.43706 3.51003C9.91631 4.03132 10.2706 4.65483 10.4732 5.33334H11.6666C12.3102 5.33327 12.9369 5.54022 13.4539 5.92364C13.9709 6.30705 14.3509 6.84658 14.5377 7.46255C14.7246 8.07851 14.7084 8.73823 14.4915 9.34426C14.2746 9.95029 13.8685 10.4705 13.3332 10.828M8 8V14M8 14L5.33333 11.3333M8 14L10.6667 11.3333" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									</g>
+								</svg>
+								<span>Téléchargements</span>
+							</li>
+							<li>
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+									<path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+								</svg>
+								<span>Plus</span>
+							</li>
+						</ul>
+					</nav>
+				</menu>
+
+				<section id="videos-container">
+					<div class="video">
+						<div class="poster-container">
+							<!-- img -->
+							<span>1:07:40</span>
+						</div>
+
+						<div class="text-container">
+							<h1>5 jours pour traverser la Corse à pied ! (La randonnée la plus dure d’Europe) GR20</h1>
+							<div>
+								<p>Mickadoule</p>
+								<p>867 vues</p>
+								<p>il y a 1 mois</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="video">
+						<div class="poster-container">
+							<!-- img -->
+							<span>1:07:40</span>
+						</div>
+
+						<div class="text-container">
+							<h1>5 jours pour traverser la Corse à pied ! (La randonnée la plus dure d’Europe) GR20</h1>
+							<div>
+								<p>Mickadoule</p>
+								<p>867 vues</p>
+								<p>il y a 1 mois</p>
+							</div>
+						</div>
+						<!--  -->
+				</section>
+
+				<section id="bottom-videos-container">
+					<div class="video">
+						<div class="poster-container">
+							<!-- img -->
+							<span>1:07:40</span>
+						</div>
+
+						<div class="text-container">
+							<h1>5 jours pour traverser la Corse à pied ! (La randonnée la plus dure d’Europe) GR20</h1>
+							<div>
+								<p>Mickadoule</p>
+								<p>867 vues</p>
+								<p>il y a 1 mois</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="video">
+						<div class="poster-container">
+							<!-- img -->
+							<span>1:07:40</span>
+						</div>
+
+						<div class="text-container">
+							<h1>5 jours pour traverser la Corse à pied ! (La randonnée la plus dure d’Europe) GR20</h1>
+							<div>
+								<p>Mickadoule</p>
+								<p>867 vues</p>
+								<p>il y a 1 mois</p>
+							</div>
+						</div>
+						<!--  -->
+				</section>
+
+				<section id="shorts-container">
+
+				</section>
+
+				<section id="subscribe-list">
+					<h1>Abonnements</h1>
+					<ul>
+						<li><SubscribeProfile name="SQUEEZIE" avatar="/src/assets/images/squeezie.png" /></li>
+						<li><SubscribeProfile name="Mcfly et Carlito" avatar="/src/assets/images/m&c.png" /></li>
+						<li><SubscribeProfile name="Pepperpot Team" avatar="/src/assets/images/pt.png" /></li>
+						<li><SubscribeProfile name="Sir Gibsy" avatar="/src/assets/images/sg.png" /></li>
+						<li><SubscribeProfile name="Vilebrequin" avatar="/src/assets/images/vi.png" /></li>
+						<li><SubscribeProfile name="Fouloscopie" avatar="/src/assets/images/fl.png" /></li>
+						<li><SubscribeProfile name="G Milgram" avatar="/src/assets/images/dm.png" /></li>
+						<li><SubscribeProfile name="The Sciencoder" avatar="/src/assets/images/ts.png" /></li>
+						<li><SubscribeProfile name="Underscore_" avatar="/src/assets/images/un.png" /></li>
+						<li><SubscribeProfile name="WTF'UX" avatar="/src/assets/images/wt.png" /></li>
+						<li><SubscribeProfile name="Tales From The Click" avatar="/src/assets/images/tf.png" /></li>
+						<li id="more-sub">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+								<path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+							</svg>
+							<span>Plus</span>
+						</li>
+					</ul>
+				</section>
+			</section>
+
+
+
+
+
+
 			<section id="second-view"></section>
 		</main>
 	</body>
@@ -65,6 +286,136 @@ import '@fontsource-variable/inter';
 
 
 <style>
+	#home-view {
+		max-width: 1240px;
+		margin: 24px auto;
+		display: grid;
+		grid-template-areas:
+		"mn mn mn vi vi vi vi vi vi vi vi vi"
+		"mn mn mn vb vb vb vb vb vb ab ab ab"
+		"sh sh sh sh sh sh sh sh sh ab ab ab";
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: 255px 255px 390px;
+		gap: 24px;
+	}
+
+	#home-view menu {
+		grid-area: mn;
+		background-color: #1F2937;
+		border-radius: 12px;
+		color: #FFF;
+		padding: 16px;
+	}
+
+	menu > div {
+		height: 52px;
+		display: flex;
+		align-items: center;
+		column-gap: 16px;
+		padding: 16px 0px 16px 8px;
+	}
+
+	menu > div p {
+		border: .1px solid #4B5563;
+		width: 100%;
+	}
+
+	menu > div span {
+		font-size: 14px;
+		color: #6B7280;
+	}
+
+	menu nav ul {
+		display: flex;
+		flex-direction: column;
+		row-gap: 4px;
+	}
+
+	menu li svg {
+		height: 18px;
+		width: 18px;
+	}
+	menu li {
+		list-style: none;
+		height: 36px;
+		padding: 8px;
+		display: flex;
+		align-items: center;
+		column-gap: 6px;
+		font-size: 14px;
+		border-radius: 8px;
+		/* transition: all ease 1s; */
+	}
+
+	menu li:hover {
+		background-color: #111827;
+		cursor: pointer;
+	}
+
+	#videos-container {
+		grid-area: vi;
+		background-color: green;
+	}
+
+	#shorts-container {
+		grid-area: sh;
+		background-color: blue;
+	}
+	
+	#bottom-videos-container {
+		grid-area: vb;
+		background-color: orange;
+	}
+
+	#subscribe-list {
+		grid-area: ab;
+		background-color: #1F2937;
+		border-radius: 12px;
+		padding: 16px;
+		display: flex;
+		flex-direction: column;
+		row-gap: 4px;
+	}
+
+	#subscribe-list li {
+		list-style: none;
+		height: 44px;
+		padding: 0px 8px;
+		cursor: pointer;
+	}
+
+	#more-sub {
+		display: flex;
+		align-items: center;
+		font-size: 14px;
+        font-weight: 500;
+        color: #fff;
+	}
+
+	#more-sub {
+		height: 28px;
+	}
+
+	#more-sub svg {
+		height: 20px;
+		width: 20px;
+	}
+
+	#subscribe-list h1 {
+		padding: 4px 0px 4px 8px;
+		color: #6B7280;
+		font-size: 14px;
+	}
+
+	#videos-container *, #bottom-videos-container *, #shorts-container * {
+		display: none;
+	}
+
+	*{
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+	}
 	body {
 		background-color: #111827;
 		min-height: 100vh;
@@ -77,7 +428,7 @@ import '@fontsource-variable/inter';
 		display: grid;
 		grid-template-columns: 2fr 8fr 2fr;
 		max-width: 1240px;
-		margin: 0 auto;
+		margin: 24px auto 0px auto;
 		column-gap: 24px;
 		max-height: 60px;
 		height: 60px;

@@ -1,0 +1,28 @@
+---
+    const { name, avatar } = Astro.props;
+---
+
+<section class="creator-profile">
+    <img src={avatar} />
+    <p>{ name }</p>
+</section>
+
+<style>
+    section {
+        display: flex;
+        column-gap: 6px;
+        align-items: center;
+
+    }
+
+    section img {
+        height: 28px;
+        width: 28px;
+    }
+
+    section p {
+        font-size: 14px;
+        font-weight: 500;
+        color: #fff;
+    }
+</style>
